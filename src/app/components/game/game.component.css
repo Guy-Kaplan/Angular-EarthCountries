@@ -1,0 +1,37 @@
+h2{
+    font-size: 33px;
+    margin: 0;
+}
+h2:hover{
+    background-color: lightcyan;
+}
+span{
+    font-size: 18px;
+}
+span:hover{
+    background-color: yellow;
+}
+#q8:hover{
+    background-color: blue;
+    color: red;
+}
+#q9:hover{
+    background-color: blue;
+    color: yellow;
+}
+#q10:hover{
+    background-color: white;
+    color: red;
+}
+table{
+    width: 50%;
+    margin: auto;
+}
+img{
+    position: fixed;
+    left: 20px;
+    bottom: 645px;
+}
+/* div{
+    border: solid;
+} */

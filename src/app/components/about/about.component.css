@@ -1,0 +1,17 @@
+h1{
+    font-size: 33px;
+    text-decoration: underline;
+}
+h1:hover{
+    background-color: burlywood;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+}
+div{
+    padding: 0;
+    margin: auto;
+    width: 50%;
+    background-color: lightblue;
+}

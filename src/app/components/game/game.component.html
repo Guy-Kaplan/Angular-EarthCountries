@@ -1,0 +1,162 @@
+<img #preview width="150">
+<br>
+<h2><mat-icon>help_outline</mat-icon> The Earth Countries Game <mat-icon>help_outline</mat-icon></h2>
+<br>
+<form>
+<div>
+    <span>1.) What is the
+        <b>capital</b> of
+        <b>Israel</b>?&nbsp;&nbsp;</span>
+    <select name="Israel" [(ngModel)]="israelCapital">
+        <option value="Tel Aviv">Tel Aviv</option>
+        <option value="Jerusalem">Jerusalem</option>
+        <option value="Lod">Lod</option>
+        <option value="Haifa">Haifa</option>
+    </select>
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span>2.) What is the
+        <b>capital</b> of
+        <b>Netherlands</b>?&nbsp;&nbsp;</span>
+    <select name="Netherlands" [(ngModel)]="netherlandsCapital">
+        <option value="The Hague">The Hague</option>
+        <option value="Amsterdam">Amsterdam</option>
+        <option value="Rotterdam">Rotterdam</option>
+        <option value="Utrecht">Utrecht</option>
+    </select>
+    <br><br>
+
+    
+    <span>3.) What is the
+        <b>capital</b> of
+        <b>Canada</b>?&nbsp;&nbsp;</span>
+    <select name="Canada" [(ngModel)]="canadaCapital">
+        <option value="Toronto">Toronto</option>
+        <option value="Montreal">Montreal</option>
+        <option value="Ottawa">Ottawa</option>
+        <option value="Calgary">Calgary</option>
+    </select>
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span>4.) What is the
+        <b>capital</b> of
+        <b>Romania</b>?&nbsp;&nbsp;</span>
+    <select name="Romania" [(ngModel)]="romaniaCapital">
+        <option value="Bratislava">Bratislava</option>
+        <option value="Tallinn">Tallinn</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Bucharest">Bucharest</option>
+    </select>
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span>5.) What is the
+        <b>capital</b> of
+        <b>Hungary</b>?&nbsp;&nbsp;</span>
+    <select name="Hungary" [(ngModel)]="hungaryCapital">
+        <option value="Bratislava">Bratislava</option>
+        <option value="Tallinn">Tallinn</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Bucharest">Bucharest</option>
+    </select>
+    <br><br>
+
+    &nbsp;&nbsp;
+    <span>6.) What is the
+        <b>capital</b> of
+        <b>Estonia</b>?&nbsp;&nbsp;</span>
+    <select name="Estonia" [(ngModel)]="estoniaCapital">
+        <option value="Bratislava">Bratislava</option>
+        <option value="Tallinn">Tallinn</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Bucharest">Bucharest</option>
+    </select>
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;
+    <span>7.) What is the
+        <b>capital</b> of
+        <b>Slovakia</b>?&nbsp;&nbsp;</span>
+    <select name="Slovakia" [(ngModel)]="slovakiaCapital">
+        <option value="Bucharest">Bucharest</option>
+        <option value="Tallinn">Tallinn</option>
+        <option value="Budapest">Budapest</option>
+        <option value="Bratislava">Bratislava</option>
+    </select>
+    <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span id="q8">8.) Whose
+            <b>country</b> is this
+            <b>flag</b>?&nbsp;&nbsp;</span>
+            <app-thumbnail
+            source="https://restcountries.eu/data/gbr.svg"
+            width="80"
+            height="50"
+            (enter)="preview.src=$event"
+            (leave)="preview.src=''"></app-thumbnail>
+            &nbsp;&nbsp;
+            <select name="UK" [(ngModel)]="ukFlag">
+                <option value="England">England</option>
+                <option value="United Nations">United Nations</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+            </select>
+        <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <span id="q9">9.) Whose
+            <b>country</b> is this
+            <b>flag</b>?&nbsp;&nbsp;</span>
+            <app-thumbnail
+            source="https://restcountries.eu/data/ukr.svg"
+            width="80"
+            height="50"
+            (enter)="preview.src=$event"
+            (leave)="preview.src=''"></app-thumbnail>
+            &nbsp;&nbsp;
+            <select name="Ukraine" [(ngModel)]="ukraineFlag">
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Macedonia">Macedonia</option>
+                <option value="Ukraine">Ukraine</option>
+            </select>
+        <br><br>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <span id="q10">10.) Whose
+            <b>country</b> is this
+            <b>flag</b>?&nbsp;&nbsp;</span>
+            <app-thumbnail
+            source="https://restcountries.eu/data/fro.svg"
+            width="80"
+            height="50"
+            (enter)="preview.src=$event"
+            (leave)="preview.src=''"></app-thumbnail>
+            &nbsp;&nbsp;
+            <select name="Faroe Islands" [(ngModel)]="faroeFlag">
+                <option value="Bouvet Island">Bouvet Island</option>
+                <option value="Faroe Islands">Faroe Islands</option>
+                <option value="Christmas Island">Christmas Island</option>
+                <option value="Cook Islands">Cook Islands</option>
+            </select>
+        <br><br>
+
+    <br>
+    <button (click)="checkAll()">Check Answers</button>
+    <br><br>
+    <input type="reset" value="Reset">
+
+</div>
+</form>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>

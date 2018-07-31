@@ -1,0 +1,39 @@
+<img #preview width="150">
+<br>
+<span>Search: </span>
+<input type="search" [(ngModel)]="searchText" autofocus>
+&nbsp;
+<mat-icon>search</mat-icon>
+<table border="1">
+    <tr id="first">
+        <th>Name</th>
+        <th>Native Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th>Flag</th>
+    </tr>
+
+    <tr *ngFor="let c of countries | filter : searchText">
+        <td>
+            {{c.name}}
+        </td>
+        <td>
+            {{c.nativeName}}
+        </td>
+        <td>
+            {{c.capital}}
+        </td>
+        <td>
+            {{c.population}}
+        </td>
+        <td>
+            <!-- <img src="{{c.flag}}"> -->
+        <app-thumbnail
+            source="{{c.flag}}"
+            width="80"
+            height="50"
+            (enter)="preview.src=$event"
+            (leave)="preview.src=''"></app-thumbnail>
+        </td>
+    </tr>
+</table>

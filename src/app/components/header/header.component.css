@@ -1,0 +1,11 @@
+h1{
+    text-decoration: underline;
+    color: blue;
+    position: relative;
+    margin: 0;
+    font-size: 40px;
+}
+/* h1:hover{
+    color: white;
+    background-color: red;
+} */

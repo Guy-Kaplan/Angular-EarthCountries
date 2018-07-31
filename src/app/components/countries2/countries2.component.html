@@ -1,0 +1,44 @@
+<!-- <img #preview width="150"> -->
+<br>
+<span>Search: </span>
+<input type="search" [(ngModel)]="searchText2" autofocus>
+&nbsp;
+<mat-icon>search</mat-icon>
+<table border="1">
+    <tr id="first">
+        <th>Name</th>
+        <th>Region</th>
+        <th>Subregion</th>
+        <th>Area</th>
+        <th>Gini</th>
+        <th>Numeric Code</th>
+        <th>Code</th>
+        <th>Domain</th>
+    </tr>
+    <tr *ngFor="let c of countries2 | filter2 : searchText2">
+        <td>
+            {{c.name}}
+        </td>
+        <td>
+            {{c.region}}
+        </td>
+        <td>
+            {{c.subregion}}
+        </td>
+        <td>
+            {{c.area}}
+        </td>
+        <td>
+            {{c.gini}}
+        </td>
+        <td>
+            {{c.numericCode}}
+        </td>
+        <td>
+            {{c.alpha3Code}}
+        </td>
+        <td>
+            {{c.topLevelDomain}}
+        </td>
+    </tr>
+</table>
