@@ -1,0 +1,25 @@
+table{
+    margin: 30px auto;
+    font-size: 22px;
+}
+#first{
+    background-color: lightgray;
+}
+#first:hover{
+    background-color: red;
+}
+tr:nth-child(even){
+    background-color: turquoise;
+}
+tr:nth-child(odd){
+    background-color: pink;
+}
+tr:hover{
+    background-color: yellow;
+}
+img{
+    position: fixed;
+    left: 20px;
+    bottom: 645px;
+}
+

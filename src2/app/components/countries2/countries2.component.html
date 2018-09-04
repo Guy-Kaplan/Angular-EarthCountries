@@ -1,0 +1,52 @@
+<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
+<!-- <img #preview width="150"> -->
+<br>
+<!-- <span>Search: </span> -->
+<mat-form-field>
+<input matInput type="search" [(ngModel)]="searchText2" [matAutocomplete]="auto"
+(input)="filter2($event.target.value)" aria-label="Number" name="search" #search="ngModel"
+placeholder="Search" autofocus>
+<mat-autocomplete #auto="matAutocomplete">
+<mat-option *ngFor="let option2 of filteredOptions2" [value]="option2">{{option2}}</mat-option>
+</mat-autocomplete>
+</mat-form-field>
+&nbsp;
+<mat-icon>search</mat-icon>
+<table border="1">
+    <tr id="first">
+        <th>Name</th>
+        <th>Region</th>
+        <th>Subregion</th>
+        <th>Area</th>
+        <th>Gini</th>
+        <th>Calling Code(s)</th>
+        <th>Code</th>
+        <th>Domain</th>
+    </tr>
+    <tr *ngFor="let c of countries2 | filter2 : searchText2">
+        <td>
+            {{c.name}}
+        </td>
+        <td>
+            {{c.region}}
+        </td>
+        <td>
+            {{c.subregion}}
+        </td>
+        <td>
+            {{c.area}}
+        </td>
+        <td>
+            {{c.gini}}
+        </td>
+        <td>
+            {{c.callingCodes}}
+        </td>
+        <td>
+            {{c.alpha3Code}}
+        </td>
+        <td>
+            {{c.topLevelDomain}}
+        </td>
+    </tr>
+</table>

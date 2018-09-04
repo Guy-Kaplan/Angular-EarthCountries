@@ -1,0 +1,47 @@
+<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  -->
+<img #preview width="150">
+<br>
+<!-- <span>Search: </span> -->
+<mat-form-field>
+<input matInput type="search" [(ngModel)]="searchText" [matAutocomplete]="auto"
+(input)="filter1($event.target.value)" aria-label="Number" name="search" #search="ngModel"
+placeholder="Search" autofocus>
+<mat-autocomplete #auto="matAutocomplete">
+<mat-option *ngFor="let option1 of filteredOptions" [value]="option1">{{option1}}</mat-option>
+</mat-autocomplete>
+</mat-form-field>
+&nbsp;
+<mat-icon>search</mat-icon>
+<table border="1">
+    <tr id="first">
+        <th>Name</th>
+        <th>Native Name</th>
+        <th>Capital</th>
+        <th>Population</th>
+        <th>Flag</th>
+    </tr>
+
+    <tr *ngFor="let c of countries | filter : searchText">
+        <td>
+            {{c.name}}
+        </td>
+        <td>
+            {{c.nativeName}}
+        </td>
+        <td>
+            {{c.capital}}
+        </td>
+        <td>
+            {{c.population}}
+        </td>
+        <td>
+            <!-- <img src="{{c.flag}}"> -->
+        <app-thumbnail
+            source="{{c.flag}}"
+            width="80"
+            height="50"
+            (enter)="preview.src=$event"
+            (leave)="preview.src=''"></app-thumbnail>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,30 @@
+<br>
+<!-- <span>Search: </span> -->
+<mat-form-field>
+<input matInput type="search" [(ngModel)]="searchText3" [matAutocomplete]="auto"
+(input)="filter3($event.target.value)" aria-label="Number" name="search" #search="ngModel"
+placeholder="Country name" autofocus>
+<mat-autocomplete #auto="matAutocomplete">
+<mat-option *ngFor="let option3 of filteredOptions3" [value]="option3">{{option3}}</mat-option>
+</mat-autocomplete>
+</mat-form-field>
+&nbsp;
+<mat-icon>search</mat-icon>
+<div *ngFor="let c of countries3 | filter3 : searchText3">
+    <span>{{c.name}}</span><br><br><br>
+    <img src="{{c.flag}}"><br>
+    <p>
+    <u>Name Codes</u>: {{c.alpha2Code}}, {{c.alpha3Code}}<br>
+    <u>Native Name</u>: {{c.nativeName}}<br>
+    <u>Capital</u>: {{c.capital}}<br>
+    <u>Region</u>: {{c.region}}<br>
+    <u>Subregion</u>: {{c.subregion}}<br>
+    <u>Domain</u>: {{c.topLevelDomain}}<br>
+    <u>Time zone(s)</u>: {{c.timezones}}<br>
+    <u>Population</u>: {{c.population}}<br>
+    <u>Area</u>: {{c.area}}<br>
+    <u>Gini</u>: {{c.gini}}<br>
+    <u>Calling Code(s)</u>: {{c.callingCodes}}<br>
+    </p>
+    <br>
+</div>

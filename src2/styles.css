@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*deeppurple-amber.css*/
+/*pink-bluegrey.css*/
+/*purple-green.css*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+mat-icon{
+    font-family: "Material Icons" !important;
+    font-size: x-large;
+}
